@@ -72,8 +72,13 @@ Where a value could not be verified it is left blank.
 (title + eISSN) into the CSV and rerun `bin/build_data`. This is the single biggest accuracy improvement,
 especially for the large Springer Nature and Wiley portfolios.
 
+## Deployment
+
+The site is published with **GitHub Pages** at <https://dieyunsong.github.io/TAFinder/>.
+`.github/workflows/deploy-pages.yml` rebuilds `data.json` and deploys `html/` on every push to `main`.
+
 ## Out of scope (not yet configured)
 
-- Deployment to Northwestern hosting (the original U-M S3/CloudFront and Google-Sheets workflows were removed).
+- Deployment to Northwestern-owned hosting (the original U-M S3/CloudFront and Google-Sheets workflows were removed).
 - An automated refresh from a Northwestern-maintained spreadsheet (the legacy `bin/update` Google-Sheets path
   remains in the repo for reference but is not wired up).
