@@ -25,14 +25,11 @@ HEADER = [
   "Journal Title",
   "eISSN",
   "eISSN Link",
-  "Discount or Waiver",
-  "Campuses Covered",
-  "Coverage Years",
   "Link to Agreement Info",
 ]
 
 # Columns that are allowed to be blank/null in the output.
-NULL_ALLOWED = ["eISSN", "eISSN Link", "Coverage Years", "Link to Agreement Info"]
+NULL_ALLOWED = ["eISSN", "eISSN Link", "Link to Agreement Info"]
 
 def abort_with(message)
   warn "build_data: #{message}"
