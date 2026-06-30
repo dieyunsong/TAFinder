@@ -14,17 +14,16 @@ substantially the U-M code, rebranded for Northwestern; the data and build pipel
 - `html/` is a fully static site (HTML + vanilla JS + DataTables + Bootstrap). No backend; all search and
   filtering happen in the browser.
 - The site reads `html/data.json`, an object of the form `{ "header": [...], "version": "...", "data": [[...]] }`
-  where each row is a positional array of 8 strings (eISSN / eISSN Link may be `null`):
+  where each row is a positional array of 5 strings (eISSN / eISSN Link / Link may be `null`):
 
-  `Publisher | Journal Title | eISSN | eISSN Link | Discount or Waiver | Campuses Covered | Coverage Years | Link to Agreement Info`
+  `Publisher | Journal Title | eISSN | eISSN Link | Link to Agreement Info`
 
 - `html/data.json` is **generated** from [`data/northwestern-agreements.csv`](data/northwestern-agreements.csv),
   the human-editable source of truth, by `bin/build_data`.
 
 ## Editing the data
 
-1. Edit `data/northwestern-agreements.csv` (same 8 columns as the header above; `Campuses Covered` is a
-   comma-separated list, e.g. `Evanston, Chicago`).
+1. Edit `data/northwestern-agreements.csv` (same 5 columns as the header above).
 2. Regenerate the JSON:
 
    ```sh
